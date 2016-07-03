@@ -1,4 +1,13 @@
 require 'sinatra'
+require 'movie'
 get ('/movies') do
-  erb :index
+  #setup an array of  movies
+  @movie = []
+  @movie[0] = Movie .new
+  @movie[0].title = "Jaws" 
+  @movie[1] = Movie.new
+  @movie[1].title = "Alien"
+  @movie[2] = Movie.new
+  @movie[2].title = "Terminator 2"
+    erb :index
 end
